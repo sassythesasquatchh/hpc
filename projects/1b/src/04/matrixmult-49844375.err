@@ -1,0 +1,27 @@
+
+The following have been reloaded with a version change:
+  1) gcc/4.8.5 => gcc/11.4.0
+
+
+Currently Loaded Modules:
+  1) StdEnv   2) gcc/11.4.0   3) openblas/0.3.20
+
+ 
+
+dgemm-blocked.c: In function 'square_dgemm':
+dgemm-blocked.c:23:32: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+   23 |   double *padded_A = (double *)malloc(padded_n * padded_n * sizeof(double));
+      |                                ^~~~~~
+dgemm-blocked.c:1:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+  +++ |+#include <stdlib.h>
+    1 | const char *dgemm_desc = "Blocked dgemm.";
+dgemm-blocked.c:23:32: warning: incompatible implicit declaration of built-in function 'malloc' [-Wbuiltin-declaration-mismatch]
+   23 |   double *padded_A = (double *)malloc(padded_n * padded_n * sizeof(double));
+      |                                ^~~~~~
+dgemm-blocked.c:23:32: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+dgemm-blocked.c:92:3: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+   92 |   free(padded_A);
+      |   ^~~~
+dgemm-blocked.c:92:3: note: include '<stdlib.h>' or provide a declaration of 'free'
+dgemm-blocked.c:92:3: warning: incompatible implicit declaration of built-in function 'free' [-Wbuiltin-declaration-mismatch]
+dgemm-blocked.c:92:3: note: include '<stdlib.h>' or provide a declaration of 'free'
